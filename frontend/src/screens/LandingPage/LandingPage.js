@@ -10,18 +10,18 @@ function LandingPage({ history }) {
 
   useEffect(() => {
     if (userInfo) {
-      history.push("/mynotes");
+      history.push("/dashboard");
     }
   }, [history, userInfo]);
 
   return (
-    <div className="main">
+    <div className="main App">
       <Container>
         <Row>
           <div className="intro-text">
             <div>
-              <h1 className="title">Welcome to Note Zipper</h1>
-              <p className="subtitle">One Safe place for all your notes.</p>
+              <h1 className="title">Welcome to CAN</h1>
+              <p className="subtitle">Member's Login Portal</p>
             </div>
             <div className="buttonContainer">
               <Link to="/login">

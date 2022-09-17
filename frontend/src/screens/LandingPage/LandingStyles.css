@@ -10,10 +10,10 @@
   text-align: center;
 }
 .main {
-  min-height: 93vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  background-image: url("../../background1.jpg");
+  background-image: url("https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?w=996&t=st=1663314599~exp=1663315199~hmac=3ff15ceacb600ecc7b39ac707e616dd62847b1d2c72b1344eb62163e75b0d26e");
   background-position: center;
   background-size: cover;
 }

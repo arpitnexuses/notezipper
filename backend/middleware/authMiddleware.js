@@ -2,6 +2,17 @@ import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 import asyncHandler from "express-async-handler";
 
+const isAdmin = (req, res, next) => {
+  const { role } = req.body;
+  if(role === "user"){
+    throw (new Error('Not admistration',401));
+  }
+  else {
+
+  next();
+}}
+
+
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 
@@ -30,4 +41,6 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 });
 
-export { protect };
+
+
+export { isAdmin, protect }

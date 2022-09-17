@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-
+import "./Header.css"
 const Footer = () => {
   return (
     <footer
@@ -10,11 +10,14 @@ const Footer = () => {
         bottom: 0,
         display: "flex",
         justifyContent: "center",
+        background: "#158cba",
+        height: "78px",
+        marginTop: "-20px"
       }}
     >
-      <Container>
+      <Container className="cont">
         <Row>
-          <Col className="text-center py-3">Copyright &copy; Note Zipper</Col>
+          <Col className="text-center py-3 copy">Copyright &copy; Nexuses</Col>
         </Row>
       </Container>
     </footer>

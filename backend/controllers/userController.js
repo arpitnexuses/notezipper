@@ -89,5 +89,22 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     throw new Error("User Not Found");
   }
 });
-
-export { authUser, updateUserProfile, registerUser };
+const protectplusplus =  asyncHandler(async (req, res) => {
+  const {role} = req.body;
+  const user = await User.findOne({ email });
+  if (user && (role === 'admin')) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      password: user.password,
+      pic: user.pic,
+      token: generateToken(user._id),
+    });
+  } else {
+    res.status(401);
+    throw new Error("Only For Adminstration");
+  }
+});
+    
+export { authUser, updateUserProfile, registerUser, protectplusplus };
